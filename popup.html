@@ -19,13 +19,19 @@ body{
 .center{
     text-align: center;
 }
+.disabled{
+    background: gray !important;
+    color: rgb(190, 190, 190) !important;
+    cursor:no-drop !important;
+    border:2px solid gray;
+}
 #abrirPuerta{
     padding: .8rem 3.5rem;
-    border-radius: 12px;
-    background: #e2e2e2;
-    color: #ff7e00;
-    box-shadow: 0 .1rem .2rem rgba(0,0,0,0.2);
-    border:none;
+    border-radius: 4px;
+    background: #ff7e00;
+    color: #fff;
+    
+    border:2px solid #ff7e00;
     margin: 1rem 0;
     font-weight: bolder;
     transition: .3s all;
@@ -33,9 +39,21 @@ body{
     font-family: 'Montserrat', sans-serif;
 
 }
+#abrirPuerta:hover{
+    background: #f2f2f2;
+    color: #ff7e00;
+    transition: .3s all;
+}
 #abrirPuerta:active{
     box-shadow: none;
     transition: .3s all;
+}
+
+#message{
+    padding: 1rem;
+    margin: 1rem 0rem;
+    text-align: center;
+    
 }
     </style>
  
@@ -49,7 +67,8 @@ body{
 
       </div>
     <div class="center">
-        <button id="abrirPuerta">Abrir</button>
+        <button id="abrirPuerta" class=''>Abrir</button>
+        <br>
         <span id="message"></span>
     </div>
   </div>
